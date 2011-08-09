@@ -1,0 +1,21 @@
+Simple bank import class-based import system.
+=============================================
+The class will after import have the following dictionary on instance.transactions:
+
+{
+    'date': date,
+    'value': value,
+    'balance': balance,
+    'text': text,
+    'hash': hashlib.md5(hash).hexdigest(), # A hash of the entire transaction imported (e.g. CSV line), to match if it was already imported
+}
+
+Structure:
+==========
+bank_backends
+    country-code
+        bank_name.py
+
+TODO:
+=====
+Add your own bank!
